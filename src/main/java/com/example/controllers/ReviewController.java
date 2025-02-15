@@ -1,5 +1,6 @@
 package com.example.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -11,7 +12,7 @@ import com.example.service.ReviewService;
 
 @RestController
 public class ReviewController {
-
+    @Autowired
     private ReviewService reviewService;
 
     public ReviewController(ReviewService reviewService) {

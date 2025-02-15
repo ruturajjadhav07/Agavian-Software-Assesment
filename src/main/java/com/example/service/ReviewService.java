@@ -1,5 +1,6 @@
 package com.example.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.entity.Movie;
@@ -9,7 +10,9 @@ import com.example.repository.ReviewRepository;
 
 @Service
 public class ReviewService {
+    @Autowired
     private MovieRepository movieRepository;
+    @Autowired
     private ReviewRepository reviewRepository;
 
     public ReviewService(MovieRepository movieRepository, ReviewRepository reviewRepository) {
